@@ -109,9 +109,15 @@ section{position:relative}
 .dropdown a{display:block;padding:10px 12px;border-radius:9px;color:var(--green-900);font-weight:500;font-size:.92rem}
 .dropdown a:hover{background:var(--green-50);color:var(--green-700)}
 
-.lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
-.lang-switch button{border:0;background:transparent;padding:7px 12px;font-weight:700;font-size:.8rem;color:var(--muted);cursor:pointer;letter-spacing:.5px}
-.lang-switch button.active{background:var(--green-800);color:#fff}
+.lang-switch{position:relative;display:inline-flex}
+.lang-toggle{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;background:var(--white);padding:7px 12px;font-weight:700;font-size:.8rem;color:var(--green-900);cursor:pointer;letter-spacing:.4px}
+.lang-toggle:hover{border-color:var(--green-500)}
+.lang-toggle .caret{font-size:.7rem;opacity:.6}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:165px;background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(20,48,57,.16);padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:60}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:none}
+.lang-menu button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:9px 12px;border-radius:8px;font-weight:600;font-size:.9rem;color:var(--green-900);cursor:pointer}
+.lang-menu button:hover{background:var(--green-50);color:var(--green-700)}
+.lang-menu button.active{background:var(--green-800);color:#fff}
 
 .btn{
   display:inline-flex;align-items:center;gap:8px;justify-content:center;
@@ -437,3 +443,25 @@ textarea:focus{outline:2px solid var(--gold-400);border-color:var(--gold-400)}
   .footer-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr}
 }
+
+/* =========================================================================
+   Arabic / RTL support (applied when <html dir="rtl"> via lang switch)
+   ========================================================================= */
+html[dir="rtl"]{direction:rtl}
+html[dir="rtl"] body{text-align:right;font-family:"Noto Naskh Arabic","Geeza Pro","Segoe UI",Tahoma,var(--sans),system-ui,sans-serif}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4,html[dir="rtl"] blockquote{font-family:"Noto Naskh Arabic","Geeza Pro",var(--serif),serif}
+html[dir="rtl"] .center,html[dir="rtl"] .section-head,html[dir="rtl"] .hero-stats,html[dir="rtl"] .ayah,html[dir="rtl"] .ticker{text-align:center}
+/* nav + menus mirror */
+html[dir="rtl"] .nav-menu{margin:0 auto 0 0}
+html[dir="rtl"] .dropdown{left:auto;right:0;text-align:right}
+html[dir="rtl"] .dropdown a{text-align:right}
+html[dir="rtl"] .has-sub > .nav-link::after{margin-left:0;margin-right:4px}
+html[dir="rtl"] .lang-menu{right:auto;left:0}
+html[dir="rtl"] .lang-menu button{text-align:right}
+html[dir="rtl"] .nav-item > .nav-link::before{transform-origin:right}
+/* checklist tick flips to the right */
+html[dir="rtl"] .checklist li{padding-left:0;padding-right:38px;text-align:right}
+html[dir="rtl"] .checklist li::before{left:auto;right:0}
+/* generic blocks default to right alignment */
+html[dir="rtl"] .prose,html[dir="rtl"] .lead,html[dir="rtl"] .card-body,html[dir="rtl"] .feature,html[dir="rtl"] .info-box,html[dir="rtl"] .acc-body,html[dir="rtl"] .footer-grid > div{text-align:right}
+html[dir="rtl"] .info-box{border-left:0;border-right:4px solid var(--green-500)}
