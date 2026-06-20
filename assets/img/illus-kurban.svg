@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Qurban">
+  <defs>
+    <linearGradient id="kbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e7d92"/><stop offset="1" stop-color="#44a2bb"/></linearGradient>
+    <linearGradient id="kgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ddbe9"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#kbg)"/>
+  <g fill="none" stroke="#9ddbe9" stroke-opacity=".10"><rect x="460" y="60" width="70" height="70"/><rect x="460" y="60" width="70" height="70" transform="rotate(45 495 95)"/></g>
+  <!-- crescent -->
+  <path d="M150 110 a52 52 0 1 0 36 92 a40 40 0 1 1 -36 -92z" fill="url(#kgold)" opacity=".9"/>
+  <!-- sheep -->
+  <g>
+    <ellipse cx="320" cy="300" rx="120" ry="74" fill="#ffffff"/>
+    <circle cx="300" cy="280" r="22" fill="#ffffff"/><circle cx="340" cy="276" r="26" fill="#ffffff"/><circle cx="360" cy="300" r="24" fill="#ffffff"/><circle cx="280" cy="300" r="22" fill="#ffffff"/><circle cx="300" cy="322" r="22" fill="#ffffff"/><circle cx="340" cy="324" r="24" fill="#ffffff"/>
+    <ellipse cx="240" cy="300" rx="34" ry="40" fill="#22424c"/>
+    <circle cx="230" cy="292" r="5" fill="#fff"/>
+    <path d="M214 274 q-16 -10 -10 6 M222 270 q-10 -16 -2 4" stroke="#22424c" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <g stroke="#22424c" stroke-width="9" stroke-linecap="round"><line x1="290" y1="368" x2="290" y2="396"/><line x1="350" y1="368" x2="350" y2="396"/></g>
+  </g>
+  <!-- name tag (proof) -->
+  <g transform="rotate(-8 470 250)"><rect x="420" y="220" width="120" height="64" rx="10" fill="#fff" opacity=".95"/><line x1="436" y1="244" x2="524" y2="244" stroke="#3a96ad" stroke-width="4"/><line x1="436" y1="262" x2="500" y2="262" stroke="#9fb3a8" stroke-width="4"/><circle cx="490" cy="214" r="6" fill="url(#kgold)"/></g>
+</svg>

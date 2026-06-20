@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📲 Kontakt — Faircharity e.V.</title>
+<meta name="description" content="Kontakt zu Faircharity e.V. — Fragen zu Spenden, Zakat, Patenschaften oder Mitgliedschaft. Wir antworten persönlich.">
+<link rel="icon" href="assets/img/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<section class="page-hero pattern-bg">
+  <div class="container">
+    <span class="eyebrow">📲 <span data-en="Contact">Kontakt</span></span>
+    <h1 data-en="Let's talk">Sprich mit uns</h1>
+    <p data-en="Questions about donations, Zakat, sponsorships or membership? We answer personally — because trust starts with a conversation.">Fragen zu Spenden, Zakat, Patenschaften oder Mitgliedschaft? Wir antworten persönlich — denn Vertrauen beginnt im Gespräch.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <h2 data-en="Reach us directly">Direkt erreichen</h2>
+        <div class="feature" style="margin-bottom:14px"><div class="ficon">✉️</div><h3 data-en="Email">E-Mail</h3><p><a href="mailto:info@faircharity.de">info@faircharity.de</a></p></div>
+        <div class="feature" style="margin-bottom:14px"><div class="ficon">🏦</div><h3 data-en="Donation account">Spendenkonto</h3><p>Faircharity e.V.<br><span class="iban" style="font-size:.9rem">DE50 4306 0967 1351 3075 00</span><br>GLS Bank · GENODEM1GLS</p></div>
+        <div class="feature"><div class="ficon">🔍</div><h3 data-en="Transparency">Transparenz</h3><p data-en="See how we use every donation."><a href="transparenz.html">Wie wir jede Spende einsetzen.</a></p></div>
+      </div>
+
+      <div class="calc reveal">
+        <form id="contact-form" class="form-grid" novalidate>
+          <div class="calc-row">
+            <div class="field"><label data-en="Name">Name</label><input type="text" required></div>
+            <div class="field"><label data-en="Email">E-Mail</label><input type="email" required></div>
+          </div>
+          <div class="field"><label data-en="Subject">Betreff</label>
+            <select>
+              <option data-en="General enquiry">Allgemeine Anfrage</option>
+              <option data-en="Donation / receipt">Spende / Quittung</option>
+              <option>Zakat</option>
+              <option data-en="Sponsorship">Patenschaft</option>
+              <option data-en="Membership (Fa(ir)mily)">Mitgliedschaft (Fa(ir)mily)</option>
+            </select>
+          </div>
+          <div class="field"><label data-en="Message">Nachricht</label><textarea required data-en-ph="How can we help you?" placeholder="Wie können wir dir helfen?"></textarea></div>
+          <button class="btn btn-primary" type="submit" data-en="Send message">Nachricht senden</button>
+          <small data-en="This demo form does not send data. Connect it to your email service or a form provider before going live.">Dieses Demo-Formular sendet keine Daten. Verbinde es vor dem Livegang mit deinem E-Mail-Dienst oder einem Formular-Anbieter.</small>
+        </form>
+        <div id="form-ok" style="display:none">
+          <h3 class="text-green" data-en="Thank you! 🌙">Vielen Dank! 🌙</h3>
+          <p data-en="Your message has been recorded (demo). We'll get back to you as soon as possible.">Deine Nachricht wurde erfasst (Demo). Wir melden uns so schnell wie möglich.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="donate-embed"></div>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

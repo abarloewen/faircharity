@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Zakat — justice and circulation">
+  <defs>
+    <linearGradient id="zbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#235b6b"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+    <linearGradient id="zgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ddbe9"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#zbg)"/>
+  <g fill="none" stroke="#9ddbe9" stroke-opacity=".10"><rect x="40" y="60" width="70" height="70"/><rect x="40" y="60" width="70" height="70" transform="rotate(45 75 95)"/></g>
+  <!-- scale of justice -->
+  <g stroke="url(#zgold)" stroke-width="6" fill="none" stroke-linecap="round">
+    <line x1="300" y1="80" x2="300" y2="330"/>
+    <line x1="170" y1="120" x2="430" y2="120"/>
+    <path d="M170 120 l-40 70 h80 z"/>
+    <path d="M430 120 l-40 70 h80 z"/>
+    <line x1="240" y1="330" x2="360" y2="330"/>
+  </g>
+  <circle cx="300" cy="80" r="10" fill="url(#zgold)"/>
+  <!-- coins on each pan -->
+  <g fill="url(#zgold)"><circle cx="150" cy="190" r="13"/><circle cx="175" cy="190" r="13"/><circle cx="410" cy="190" r="13"/><circle cx="435" cy="190" r="13"/></g>
+  <!-- circulation arrows -->
+  <path d="M300 360 q120 0 120 -80" fill="none" stroke="#8fd0e2" stroke-width="5" stroke-dasharray="4 10" stroke-linecap="round"/>
+  <path d="M300 360 q-120 0 -120 -80" fill="none" stroke="#8fd0e2" stroke-width="5" stroke-dasharray="4 10" stroke-linecap="round"/>
+</svg>

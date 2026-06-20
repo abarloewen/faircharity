@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Child sponsorship">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e7d92"/><stop offset="1" stop-color="#44a2bb"/></linearGradient>
+    <linearGradient id="sgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ddbe9"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#sbg)"/>
+  <g fill="none" stroke="#9ddbe9" stroke-opacity=".10"><rect x="470" y="50" width="70" height="70"/><rect x="470" y="50" width="70" height="70" transform="rotate(45 505 85)"/></g>
+  <!-- protective hands -->
+  <path d="M120 330 q40 -120 180 -120 q140 0 180 120" fill="none" stroke="url(#sgold)" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+  <!-- three figures -->
+  <g fill="url(#sgold)">
+    <circle cx="240" cy="210" r="26"/><path d="M204 320 q0 -70 36 -70 q36 0 36 70 z"/>
+    <circle cx="360" cy="210" r="26"/><path d="M324 320 q0 -70 36 -70 q36 0 36 70 z"/>
+  </g>
+  <g fill="#cfeef5">
+    <circle cx="300" cy="250" r="18"/><path d="M276 330 q0 -50 24 -50 q24 0 24 50 z"/>
+  </g>
+  <!-- heart -->
+  <path d="M300 130 c-10 -12 -34 -10 -34 10 c0 16 18 28 34 40 c16 -12 34 -24 34 -40 c0 -20 -24 -22 -34 -10 z" fill="url(#sgold)"/>
+</svg>

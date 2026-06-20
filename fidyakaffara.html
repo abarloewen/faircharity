@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>⚖️ Fidya &amp; Kaffara — Faircharity e.V.</title>
+<meta name="description" content="Fidya & Kaffara korrekt berechnet und transparent umgesetzt: 6 € Speisung vor Ort + 20 % Umsetzung. Mit Fidya-Rechner.">
+<link rel="icon" href="assets/img/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<section class="page-hero pattern-bg">
+  <div class="container">
+    <span class="eyebrow">⚖️ <span data-en="Fidya & Kaffara">Fidya &amp; Kaffara</span></span>
+    <h1 data-en="Make up what was missed — correctly">Versäumtes ausgleichen — korrekt</h1>
+    <p data-en="When fasting cannot be made up, Fidya and Kaffara feed people in need. We calculate them correctly and carry them out transparently.">Wenn Fasten nicht nachgeholt werden kann, speisen Fidya und Kaffara Bedürftige. Wir berechnen sie korrekt und setzen sie transparent um.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#calc" data-en="🧮 Calculate Fidya">🧮 Fidya berechnen</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2">
+      <div class="feature reveal"><div class="ficon">🍲</div><h3 data-en="Fidya">Fidya</h3><p data-en="For every fasting day that cannot be made up (e.g. due to chronic illness or old age), one needy person is fed.">Für jeden Fastentag, der nicht nachgeholt werden kann (z. B. bei chronischer Krankheit oder hohem Alter), wird eine bedürftige Person gespeist.</p></div>
+      <div class="feature reveal"><div class="ficon">📿</div><h3 data-en="Kaffara">Kaffara</h3><p data-en="Expiation for deliberately breaking a fast: 60 consecutive days of fasting — or, where not possible, feeding 60 people in need.">Sühne für das vorsätzliche Brechen eines Fastens: 60 aufeinanderfolgende Fastentage — oder, wo nicht möglich, die Speisung von 60 Bedürftigen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARENT PRICING -->
+<section class="section cream-2">
+  <div class="container narrow">
+    <div class="section-head reveal"><span class="eyebrow">💰 <span data-en="Transparent pricing">Transparente Preise</span></span><h2 data-en="What your contribution covers">Woraus sich dein Beitrag zusammensetzt</h2></div>
+    <div class="info-box reveal">
+      <p data-en="We base our prices on the real local cost of food. On top of the actual project price we add 20% organisation and implementation costs — used solely to deliver, monitor and document the help.">Wir orientieren uns an den realen Preisen vor Ort für Lebensmittel. Auf den tatsächlichen Projektpreis rechnen wir 20 % Organisations- und Umsetzungskosten auf — ausschließlich für Durchführung, Kontrolle und Dokumentation.</p>
+      <div class="grid grid-3" style="margin-top:16px;gap:14px">
+        <div class="center"><div style="font-family:var(--serif);font-size:1.6rem;color:var(--green-700)">6,00&nbsp;€</div><small data-en="Meal on site">Speisung vor Ort</small></div>
+        <div class="center"><div style="font-family:var(--serif);font-size:1.6rem;color:var(--gold-600)">+1,20&nbsp;€</div><small data-en="Implementation (20%)">Umsetzung (20 %)</small></div>
+        <div class="center"><div style="font-family:var(--serif);font-size:1.6rem;color:var(--green-800)">7,20&nbsp;€</div><small data-en="Total per meal">Gesamt je Speisung</small></div>
+      </div>
+      <p style="margin-top:14px" data-en="This guarantees the full €6 reaches the person in need, while €1.20 makes reliable, transparent delivery possible.">So ist garantiert, dass die vollen 6 € bei der bedürftigen Person ankommen, während 1,20 € die zuverlässige, transparente Umsetzung ermöglichen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section" id="calc">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow text-gold" style="font-weight:800">🧮 <span data-en="Fidya & Kaffara calculator">Fidya- &amp; Kaffara-Rechner</span></span>
+        <h2 data-en="Work out your contribution">Berechne deinen Beitrag</h2>
+        <p class="lead" data-en="Enter the number of missed days (for Kaffara use 60) and how many people you want to feed per day. We'll calculate the total at €6 per meal plus 20% implementation.">Gib die Anzahl versäumter Tage an (für Kaffara: 60) und wie viele Personen pro Tag du speisen möchtest. Wir berechnen die Summe mit 6 € je Speisung zzgl. 20 % Umsetzung.</p>
+      </div>
+      <div class="calc reveal" id="fidya-calc">
+        <div class="field"><label data-en="Number of days (Kaffara = 60)">Anzahl Tage (Kaffara = 60)</label><input id="f-days" type="number" min="0" value="30"></div>
+        <div class="field"><label data-en="People fed per day">Personen je Tag</label><input id="f-people" type="number" min="1" value="1"></div>
+        <div class="calc-result">
+          <small data-en="Meals total">Speisungen gesamt</small>
+          <div id="f-meals" style="font-weight:700;color:var(--green-700)">30</div>
+          <small data-en="Your contribution (incl. 20%)" style="display:block;margin-top:8px">Dein Beitrag (inkl. 20 %)</small>
+          <div class="big" id="f-out">0,00 €</div>
+        </div>
+        <a class="btn btn-primary" style="width:100%;margin-top:16px" href="spenden.html" data-en="👉 Give this contribution">👉 Diesen Beitrag geben</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section green">
+  <div class="container narrow center reveal">
+    <h2 data-en="Reliable, transparent, documented">Verlässlich, transparent, dokumentiert</h2>
+    <p class="lead" data-en="Every distribution is recorded — so an obligation fulfilled also becomes real, traceable help.">Jede Verteilung wird dokumentiert — damit eine erfüllte Pflicht zugleich echte, nachvollziehbare Hilfe wird.</p>
+    <a class="btn btn-green mt-2" href="spenden.html" data-en="❤ Donate now">❤ Jetzt spenden</a>
+  </div>
+</section>
+
+<div id="donate-embed"></div>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

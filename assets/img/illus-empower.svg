@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Help to self-help">
+  <defs>
+    <linearGradient id="ebg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a96ad"/><stop offset="1" stop-color="#5bb4ca"/></linearGradient>
+    <linearGradient id="egold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ddbe9"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#ebg)"/>
+  <g fill="none" stroke="#9ddbe9" stroke-opacity=".10"><rect x="60" y="300" width="60" height="60"/><rect x="60" y="300" width="60" height="60" transform="rotate(45 90 330)"/></g>
+  <!-- open hand -->
+  <path d="M150 360 q-10 -90 60 -110 l4 -50 q4 -16 18 -10 q8 4 6 16 l-6 40 8 -2 4 -48 q2 -16 16 -12 q10 4 8 16 l-4 46 8 0 6 -40 q2 -16 16 -12 q10 4 8 16 l-8 44 8 4 8 -30 q4 -14 16 -8 q8 4 4 16 l-16 64 q-10 50 -70 60 z" fill="url(#egold)" opacity=".95"/>
+  <!-- sprouting plant -->
+  <g stroke="#d6eef5" stroke-width="6" fill="none" stroke-linecap="round"><path d="M380 360 V230"/></g>
+  <path d="M380 250 q-50 -6 -56 -56 q56 -4 56 56z" fill="#8fd0e2"/>
+  <path d="M380 230 q50 -10 56 -64 q-56 4 -56 64z" fill="#d3edf3"/>
+  <!-- coins growing -->
+  <g fill="url(#egold)"><ellipse cx="470" cy="356" rx="34" ry="12"/><ellipse cx="470" cy="344" rx="34" ry="12"/><ellipse cx="470" cy="332" rx="34" ry="12"/></g>
+</svg>

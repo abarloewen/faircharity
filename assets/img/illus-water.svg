@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Sustainable water supply">
+  <defs>
+    <linearGradient id="wbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a96ad"/><stop offset="1" stop-color="#44a2bb"/></linearGradient>
+    <linearGradient id="wgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ddbe9"/><stop offset="1" stop-color="#3a96ad"/></linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#wbg)"/>
+  <g fill="none" stroke="#9ddbe9" stroke-opacity=".10"><rect x="40" y="40" width="60" height="60"/><rect x="40" y="40" width="60" height="60" transform="rotate(45 70 70)"/><rect x="500" y="300" width="70" height="70"/><rect x="500" y="300" width="70" height="70" transform="rotate(45 535 335)"/></g>
+  <!-- ground -->
+  <path d="M0 330 Q300 300 600 330 V420 H0 Z" fill="#2e7d92" opacity=".55"/>
+  <!-- water tower -->
+  <g stroke="url(#wgold)" stroke-width="6" fill="none" stroke-linejoin="round">
+    <path d="M250 120 h100 l-14 60 h-72 z"/>
+    <line x1="262" y1="180" x2="262" y2="330"/>
+    <line x1="338" y1="180" x2="338" y2="330"/>
+    <line x1="262" y1="240" x2="338" y2="240"/>
+    <path d="M262 290 L338 240 M338 290 L262 240" stroke-opacity=".5"/>
+  </g>
+  <!-- tap + drops -->
+  <g stroke="url(#wgold)" stroke-width="6" fill="none" stroke-linecap="round"><path d="M300 330 v40 h60"/><path d="M360 370 q14 0 14 14"/></g>
+  <g fill="#9ddbe9"><circle cx="376" cy="404" r="6"/><circle cx="392" cy="392" r="4"/></g>
+  <!-- sun -->
+  <circle cx="470" cy="110" r="34" fill="url(#wgold)" opacity=".9"/>
+</svg>
