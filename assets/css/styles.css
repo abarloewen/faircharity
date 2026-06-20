@@ -93,6 +93,11 @@ section{position:relative}
   white-space:nowrap;
 }
 .nav-link:hover{background:var(--green-50);color:var(--green-700)}
+.nav-link.campaign{color:var(--gold-600);font-weight:800}
+.nav-link.campaign:hover{background:var(--gold-100);color:var(--gold-600)}
+.nav-link.campaign .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e0533b;margin-right:5px;box-shadow:0 0 0 0 rgba(224,83,59,.6);animation:livePulse 1.8s infinite}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(224,83,59,.55)}70%{box-shadow:0 0 0 7px rgba(224,83,59,0)}100%{box-shadow:0 0 0 0 rgba(224,83,59,0)}}
+.mobile-panel a.campaign{color:var(--gold-600);font-weight:800}
 .has-sub > .nav-link::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:2px;opacity:.6}
 .dropdown{
   position:absolute;top:calc(100% + 8px);left:0;min-width:240px;
@@ -163,7 +168,7 @@ section{position:relative}
 
 /* page hero (smaller, for subpages) */
 .page-hero{padding:66px 0 70px}
-.page-hero.hero-img{background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-img{background-size:cover;background-position:center;background-repeat:no-repeat}
 .page-hero .eyebrow{margin-bottom:16px}
 .page-hero h1{color:#fff}
 .page-hero p{color:rgba(255,255,255,.85);max-width:62ch;font-size:1.08rem}

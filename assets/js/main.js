@@ -13,7 +13,7 @@
   // ---------------------------------------------------------------------
   var NAV = [
     { de: "Home", en: "Home", href: "index.html" },
-    { de: "Kurban", en: "Qurban", href: "kurban.html" },
+    { de: "🌙 Aschura", en: "🌙 Ashura", href: "ashura/index.html", campaign: true },
     {
       de: "Projekte", en: "Projects",
       children: [
@@ -25,6 +25,7 @@
     {
       de: "Religiöse Spenden", en: "Religious Giving",
       children: [
+        { de: "🐑 Kurban", en: "🐑 Qurban", href: "kurban.html" },
         { de: "Zakat al-Māl", en: "Zakat al-Mal", href: "zakat.html" },
         { de: "Fidya & Kaffara", en: "Fidya & Kaffara", href: "fidyakaffara.html" },
         { de: "Zakat al-Fitr", en: "Zakat al-Fitr", href: "fitr26.html" },
@@ -54,6 +55,9 @@
         }).join("");
         return '<li class="nav-item has-sub"><span class="nav-link" tabindex="0" data-en="' + n.en + '">' + n.de + '</span><div class="dropdown">' + subs + "</div></li>";
       }
+      if (n.campaign) {
+        return '<li class="nav-item"><a class="nav-link campaign" href="' + ROOT + n.href + '"><span class="live-dot"></span><span data-en="' + n.en + '">' + n.de + "</span></a></li>";
+      }
       return '<li class="nav-item"><a class="nav-link" href="' + ROOT + n.href + '" data-en="' + n.en + '">' + n.de + "</a></li>";
     }).join("");
 
@@ -77,6 +81,9 @@
           return '<a href="' + ROOT + c.href + '" data-en="' + c.en + '">' + c.de + "</a>";
         }).join("");
         return head + subs;
+      }
+      if (n.campaign) {
+        return '<a class="campaign" href="' + ROOT + n.href + '"><span class="live-dot"></span><span data-en="' + n.en + '">' + n.de + "</span></a>";
       }
       return '<a href="' + ROOT + n.href + '" data-en="' + n.en + '">' + n.de + "</a>";
     }).join("");
