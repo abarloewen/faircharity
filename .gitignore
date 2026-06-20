@@ -8,3 +8,6 @@ faircharity-site*.zip
 node_modules/
 .vercel
 .netlify
+
+# separate project, not part of the website
+charityos/
