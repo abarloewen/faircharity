@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aschura 2026 — Spende am Tag der größten Belohnung | Faircharity e.V.</title>
-<meta name="description" content="Am 10. Muharram (Aschura) zählt jede gute Tat besonders. Spende sauberes Wasser, Nahrung und Hilfe für Waisen — transparent, halal und nachvollziehbar. Faircharity e.V.">
+<meta name="description" content="Am 10. Muharram (Aschura) zählt jede gute Tat besonders. Spende sauberes Wasser, Nahrung und Hilfe für Waisen in Indonesien — transparent, halal und nachvollziehbar. Faircharity e.V.">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Aschura 2026 — Sadaqa am gesegneten Tag">
 <meta property="og:description" content="Verwandle den Tag von Aschura in Hoffnung. Deine Spende erreicht Menschen in Not — zu 100 % nachvollziehbar.">
@@ -36,20 +36,23 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:var(--green-700);text-decoration:none}
-h1,h2,h3{font-family:var(--serif);line-height:1.14;color:var(--green-900);margin:0 0 .4em;overflow-wrap:break-word}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.14;color:var(--green-900);margin:0 0 .4em;overflow-wrap:break-word}
 h1{font-size:clamp(2.1rem,5.2vw,3.5rem)}
 h2{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+h3{font-size:1.3rem}
 p{margin:0 0 1rem}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 .narrow{max-width:760px;margin-inline:auto}
-.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:15px 30px;border-radius:999px;font-weight:800;font-size:1.02rem;cursor:pointer;border:2px solid transparent;transition:.2s;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:15px 30px;border-radius:999px;font-weight:800;font-size:1.02rem;cursor:pointer;border:2px solid transparent;transition:.2s;line-height:1;text-align:center}
 .btn-primary{background:var(--gold);color:#2a2a16;box-shadow:0 10px 24px -8px rgba(205,163,58,.6)}
 .btn-primary:hover{background:#dcb24a;transform:translateY(-2px)}
 .btn-green{background:var(--green-600);color:#fff}
 .btn-green:hover{background:var(--green-700);transform:translateY(-2px)}
 .btn-light{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.5)}
 .btn-light:hover{background:#fff;color:var(--green-900)}
-.btn-block{width:100%}
+.btn-outline{background:transparent;border-color:var(--green-600);color:var(--green-700)}
+.btn-outline:hover{background:var(--green-600);color:#fff}
+.btn-sm{padding:11px 20px;font-size:.92rem}
 
 /* top bar */
 .bar{position:sticky;top:0;z-index:40;background:rgba(246,251,253,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -58,7 +61,7 @@ p{margin:0 0 1rem}
 .bar .btn{margin-left:auto;padding:10px 20px;font-size:.92rem}
 
 /* hero */
-.hero{position:relative;color:#fff;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;color:#fff;min-height:92vh;display:flex;align-items:center;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:
   linear-gradient(180deg,rgba(20,48,57,.62),rgba(20,48,57,.78)),
   url("https://images.unsplash.com/photo-1674508304566-f67ee711750a?auto=format&fit=crop&w=1700&q=70") center/cover}
@@ -78,15 +81,39 @@ p{margin:0 0 1rem}
 .cd-box .l{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.78);margin-top:6px}
 
 /* sections */
-.sec{padding:72px 0}
+.sec{padding:74px 0}
+.sec.tight{padding:54px 0}
 .sec.cream2{background:var(--cream-2)}
 .sec.teal{background:var(--green-900);color:#fff}
-.sec.teal h2{color:#fff}
+.sec.teal h2,.sec.teal h3{color:#fff}
 .center{text-align:center}
 .kicker{color:var(--green-600);font-weight:800;letter-spacing:1.4px;text-transform:uppercase;font-size:.8rem}
+.teal .kicker{color:var(--gold-soft)}
 .lead{font-size:1.12rem;color:var(--ink-soft)}
+.shead{max-width:720px;margin:0 auto 40px}
 
-/* impact cards */
+/* ayah */
+.ayah{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--green-800);border-left:4px solid var(--gold);padding:6px 0 6px 20px;margin:18px 0}
+
+/* video placeholder */
+.video-ph{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9;max-width:960px;margin:0 auto;background:#0c2630 center/cover;cursor:pointer}
+.video-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,48,57,.35),rgba(20,48,57,.6))}
+.video-ph .play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.35);transition:.2s}
+.video-ph:hover .play{transform:translate(-50%,-50%) scale(1.08)}
+.video-ph .play span{margin-left:6px;border-left:26px solid var(--green-800);border-top:16px solid transparent;border-bottom:16px solid transparent}
+.video-ph .vlabel{position:absolute;z-index:2;left:18px;bottom:16px;background:rgba(0,0,0,.55);color:#fff;padding:7px 14px;border-radius:999px;font-size:.82rem;font-weight:700}
+
+/* donation tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.tier{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);transition:.22s;display:flex;flex-direction:column;gap:8px;position:relative}
+.tier:hover{transform:translateY(-5px);border-color:var(--gold)}
+.tier.pop{border:2px solid var(--gold)}
+.tier .flag{position:absolute;top:-12px;left:24px;background:var(--gold);color:#2a2a16;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:5px 12px;border-radius:999px}
+.tier .amt{font-family:var(--serif);font-size:2.2rem;color:var(--green-800)}
+.tier p{margin:0;color:var(--ink-soft);font-size:.96rem}
+.tier .btn{margin-top:8px}
+
+/* project cards */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-6px)}
@@ -94,29 +121,38 @@ p{margin:0 0 1rem}
 .card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
 .card:hover .ph img{transform:scale(1.07)}
 .card .bd{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.amount{font-family:var(--serif);font-size:1.9rem;color:var(--green-700)}
-.card h3{margin:0;font-size:1.2rem}
-.card p{margin:0;color:var(--ink-soft);font-size:.96rem}
+.card .amount{font-family:var(--serif);font-size:1.7rem;color:var(--green-700)}
+.card h3{margin:0;font-size:1.18rem}
+.card p{margin:0;color:var(--ink-soft);font-size:.95rem}
 .card .btn{margin-top:auto;align-self:flex-start}
 
-/* virtue */
-.split{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
-.split img{border-radius:18px;box-shadow:var(--shadow);width:100%;height:100%;object-fit:cover;max-height:440px}
-.ayah{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--green-800);border-left:4px solid var(--gold);padding:6px 0 6px 20px;margin:18px 0}
+/* project spotlight */
+.spot{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#fff;margin-top:30px}
+.spot .img{min-height:360px;background-position:center;background-size:cover}
+.spot .txt{padding:46px 44px}
+.spot.rev .img{order:2}
+.spot .stats{display:flex;gap:22px;flex-wrap:wrap;margin:18px 0}
+.spot .stats .s .n{font-family:var(--serif);font-size:1.7rem;color:var(--green-700);line-height:1}
+.spot .stats .s .t{font-size:.82rem;color:var(--muted)}
+.spot .pill{display:inline-block;background:var(--green-50);border:1px solid var(--line);color:var(--green-700);padding:5px 14px;border-radius:999px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+
+/* indonesia gallery band */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.gal img{width:100%;height:230px;object-fit:cover;border-radius:14px}
 
 /* urgency band */
-.band{position:relative;color:#fff;text-align:center;padding:84px 22px;overflow:hidden}
+.band{position:relative;color:#fff;text-align:center;padding:88px 22px;overflow:hidden}
 .band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,48,57,.72),rgba(20,48,57,.82)),url("https://images.unsplash.com/photo-1553775927-a071d5a6a39a?auto=format&fit=crop&w=1700&q=70") center/cover}
 .band>*{position:relative;z-index:2}
 .band h2{color:#fff;max-width:20ch;margin-inline:auto}
 
 /* donate */
-.donate-card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;max-width:860px;margin:34px auto 0}
+.donate-card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;max-width:880px;margin:34px auto 0}
 .donate-card .hd{background:var(--green-800);color:#fff;padding:22px 26px}
 .donate-card .hd h3{color:#fff;margin:0 0 4px}
 .donate-card .hd p{margin:0;color:rgba(255,255,255,.85);font-size:.95rem}
 .amt-row{display:flex;flex-wrap:wrap;gap:10px;padding:20px 26px 0}
-.amt{flex:1 1 90px;border:2px solid var(--line);background:var(--cream);border-radius:12px;padding:12px;text-align:center;font-weight:800;color:var(--green-800);cursor:pointer;transition:.18s}
+.amt{flex:1 1 80px;border:2px solid var(--line);background:var(--cream);border-radius:12px;padding:12px;text-align:center;font-weight:800;color:var(--green-800);cursor:pointer;transition:.18s}
 .amt:hover{border-color:var(--gold);transform:translateY(-2px)}
 .tw-frame{padding:14px 26px 26px}
 .tw-frame iframe{width:100%;min-height:760px;border:1px solid var(--line);border-radius:14px;background:#fff}
@@ -126,8 +162,17 @@ p{margin:0 0 1rem}
 .tstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
 .tstrip .t{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:20px;text-align:center}
 .tstrip .t .ic{font-size:1.6rem}
-.tstrip .t h4{margin:8px 0 4px;font-family:var(--sans);font-size:1rem}
+.tstrip .t h4{margin:8px 0 4px;font-family:var(--sans);font-size:1rem;color:#fff}
 .tstrip .t p{margin:0;font-size:.86rem;color:rgba(255,255,255,.8)}
+
+/* faq */
+.faq{max-width:780px;margin:30px auto 0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;color:var(--green-900);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.3rem}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 22px 18px;color:var(--ink-soft)}
 
 /* footer */
 .foot{background:#143038;color:rgba(255,255,255,.78);padding:42px 0 26px;text-align:center}
@@ -144,8 +189,13 @@ p{margin:0 0 1rem}
 .reveal.in{opacity:1;transform:none}
 
 @media(max-width:860px){
+  .tiers{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
-  .split{grid-template-columns:1fr;gap:26px}
+  .spot{grid-template-columns:1fr}
+  .spot.rev .img{order:0}
+  .spot .img{min-height:240px}
+  .spot .txt{padding:32px 26px}
+  .gal{grid-template-columns:1fr 1fr}
   .tstrip{grid-template-columns:1fr 1fr}
   .hero{min-height:auto;padding:30px 0}
   .sticky-cta{display:block}
@@ -177,7 +227,7 @@ p{margin:0 0 1rem}
     </div>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#spenden">❤ Jetzt am Aschura-Tag spenden</a>
-      <a class="btn btn-light" href="#wirkung">Was deine Spende bewirkt</a>
+      <a class="btn btn-light" href="#projekte">Unsere Projekte ansehen</a>
     </div>
     <div class="trust-row">
       <span>✅ 100 % Zakat-Policy</span>
@@ -189,57 +239,122 @@ p{margin:0 0 1rem}
 
 <!-- VIRTUE -->
 <section class="sec">
+  <div class="wrap narrow center reveal">
+    <span class="kicker">Warum gerade an Aschura?</span>
+    <h2>Ein Tag der Barmherzigkeit — und der größten Belohnung</h2>
+    <p class="lead">Aschura erinnert an den Tag, an dem Allah den Propheten Mūsā (a.s.) und sein Volk rettete. Der Prophet Muhammad ﷺ fastete an diesem Tag und empfahl ihn als Tag der Dankbarkeit, der Reinigung und der guten Taten. Verbinde dein Fasten und deine Bittgebete mit echter Sadaqa.</p>
+    <div class="ayah" style="text-align:left;display:inline-block">„Wer an einem solchen Tag Gutes tut und einem Bedürftigen hilft, dessen Lohn ist bei Allah gewaltig.“</div>
+  </div>
+</section>
+
+<!-- VIDEO PLACEHOLDER -->
+<section class="sec tight cream2">
   <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <span class="kicker">Warum gerade an Aschura?</span>
-        <h2>Ein Tag der Barmherzigkeit — und der größten Belohnung</h2>
-        <p class="lead">Aschura erinnert an den Tag, an dem Allah den Propheten Mūsā (a.s.) und sein Volk rettete. Der Prophet Muhammad ﷺ fastete an diesem Tag und empfahl ihn als Tag der Dankbarkeit, der Reinigung und der guten Taten.</p>
-        <div class="ayah">„Wer an einem solchen Tag Gutes tut und einem Bedürftigen hilft, dessen Lohn ist bei Allah gewaltig.“</div>
-        <p>Verbinde dein Fasten und deine Bittgebete mit echter Sadaqa: Eine Spende, die genau heute Menschenleben verändert — und als Sadaqa Jāriyah weiterwirkt.</p>
-        <a class="btn btn-green" href="#spenden">❤ Sadaqa geben</a>
-      </div>
-      <img class="reveal" src="https://images.unsplash.com/photo-1655438806765-d70d1443dfa9?auto=format&fit=crop&w=1000&q=70" alt="Bittgebet an Aschura">
+    <div class="shead center reveal">
+      <span class="kicker">🎬 Einblick</span>
+      <h2>Sieh mit eigenen Augen, was deine Spende bewirkt</h2>
+      <p class="lead">Ein kurzer Film aus unseren Projekten — bald hier verfügbar.</p>
+    </div>
+    <!-- ===== DUMMY-VIDEO PLATZHALTER =====
+         Zum Aktivieren: dieses Block-Innere durch ein <iframe> (YouTube/Vimeo)
+         oder ein <video controls poster="..."> mit eurer MP4 ersetzen. ===== -->
+    <div class="video-ph reveal" id="video" style="background-image:linear-gradient(rgba(20,48,57,.25),rgba(20,48,57,.45)),url('https://images.unsplash.com/photo-1589104760192-ccab0ce0d90f?auto=format&fit=crop&w=1400&q=70')" role="button" aria-label="Video abspielen (Platzhalter)">
+      <div class="play"><span></span></div>
+      <div class="vlabel">▶ Kampagnen-Video · Platzhalter</div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT -->
-<section class="sec cream2" id="wirkung">
+<!-- DONATION TIERS -->
+<section class="sec" id="betrag">
   <div class="wrap">
-    <div class="center narrow reveal">
-      <span class="kicker">Was deine Spende bewirkt</span>
-      <h2>Konkrete Hilfe — kein leeres Versprechen</h2>
-      <p class="lead">Wähle, wie du an diesem gesegneten Tag helfen möchtest. Jeder Betrag erreicht Menschen in Not — sorgfältig geplant und vor Ort dokumentiert.</p>
+    <div class="shead center reveal">
+      <span class="kicker">Wähle deinen Beitrag</span>
+      <h2>Jeder Betrag verändert ein Leben</h2>
+      <p class="lead">Diese Beispiele zeigen, was deine Aschura-Spende konkret bewirkt. Den genauen Betrag wählst du anschließend selbst.</p>
     </div>
-    <div class="cards">
-      <article class="card reveal">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&w=800&q=70" alt="Sauberes Wasser"></div>
-        <div class="bd">
-          <div class="amount">ab 50&nbsp;€</div>
-          <h3>💧 Sauberes Wasser</h3>
-          <p>Zugang zu sauberem Wasser für Familien — gebaut und gewartet für dauerhafte Nutzung. Eine echte Sadaqa Jāriyah.</p>
-          <a class="btn btn-green" href="#spenden">Wasser spenden</a>
+    <div class="tiers">
+      <div class="tier reveal"><div class="amt">25&nbsp;€</div><h3>Warme Mahlzeiten</h3><p>Versorgt mehrere bedürftige Familien mit nahrhaftem Essen am Aschura-Tag.</p><a class="btn btn-outline btn-sm" href="#spenden">Diesen Betrag geben</a></div>
+      <div class="tier pop reveal"><span class="flag">Beliebt</span><div class="amt">50&nbsp;€</div><h3>Sauberes Wasser</h3><p>Beteiligung an einem Brunnen — eine Sadaqa Jāriyah, die jahrelang weiterfließt.</p><a class="btn btn-primary btn-sm" href="#spenden">Diesen Betrag geben</a></div>
+      <div class="tier reveal"><div class="amt">100&nbsp;€</div><h3>Ein Monat für ein Waisenkind</h3><p>Bildung, Versorgung und ein sicheres Zuhause für ein Waisenkind in Indonesien.</p><a class="btn btn-outline btn-sm" href="#spenden">Diesen Betrag geben</a></div>
+      <div class="tier reveal"><div class="amt">250&nbsp;€</div><h3>Nothilfe-Paket</h3><p>Lebensmittel, Hygiene und Grundversorgung für eine ganze Familie über Wochen.</p><a class="btn btn-outline btn-sm" href="#spenden">Diesen Betrag geben</a></div>
+      <div class="tier reveal"><div class="amt">500&nbsp;€</div><h3>Hilfe zur Selbsthilfe</h3><p>Werkzeuge oder eine Nähmaschine — ein Mensch wird dauerhaft unabhängig.</p><a class="btn btn-outline btn-sm" href="#spenden">Diesen Betrag geben</a></div>
+      <div class="tier reveal"><div class="amt">Frei</div><h3>Dein Wunschbetrag</h3><p>Jede Sadaqa zählt — gib so viel, wie es dir am Tag von Aschura möglich ist.</p><a class="btn btn-green btn-sm" href="#spenden">Frei spenden</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT SPOTLIGHTS -->
+<section class="sec cream2" id="projekte">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="kicker">Unsere Projekte im Detail</span>
+      <h2>Wohin deine Spende fließt</h2>
+      <p class="lead">Sorgfältig geplant, vor Ort begleitet und dokumentiert — damit Hilfe wirklich ankommt.</p>
+    </div>
+
+    <!-- Spotlight 1: Wasser -->
+    <div class="spot reveal">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="txt">
+        <span class="pill">💧 Wasserversorgung</span>
+        <h3>Sauberes Wasser, das Jahre weiterfließt</h3>
+        <p>Wir bauen Brunnen, Wassertürme und Leitungen — ausgelegt für die tägliche Nutzung ganzer Gemeinden und mit Wartungsplan abgesichert. Keine kurzfristige Kampagne, sondern eine echte Sadaqa Jāriyah.</p>
+        <div class="stats">
+          <div class="s"><div class="n">100%</div><div class="t">dokumentiert</div></div>
+          <div class="s"><div class="n">∞</div><div class="t">Sadaqa Jāriyah</div></div>
+          <div class="s"><div class="n">ab 50&nbsp;€</div><div class="t">Beteiligung</div></div>
         </div>
-      </article>
-      <article class="card reveal">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=800&q=70" alt="Warme Mahlzeiten"></div>
-        <div class="bd">
-          <div class="amount">ab 30&nbsp;€</div>
-          <h3>🍲 Warme Mahlzeiten</h3>
-          <p>Nahrhafte Mahlzeiten für bedürftige Familien — Fleisch und Essen, das viele nur selten bekommen.</p>
-          <a class="btn btn-green" href="#spenden">Nahrung spenden</a>
+        <a class="btn btn-green btn-sm" href="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" target="_blank" rel="noopener">💧 Wasser spenden</a>
+      </div>
+    </div>
+
+    <!-- Spotlight 2: Waisen in Indonesien -->
+    <div class="spot rev reveal">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1613447895817-e617a4093f50?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="txt">
+        <span class="pill">🤲 Waisen in Indonesien</span>
+        <h3>Ein Zuhause, Bildung und Würde für Waisenkinder</h3>
+        <p>In Indonesien begleiten wir Waisenhäuser und Internate — besonders Mädchen, die sonst kaum eine Chance auf Bildung hätten. Deine Patenschaft sichert Schule, Verpflegung, medizinische Versorgung und ein sicheres Umfeld. Der Prophet ﷺ liebte es, Waisen zu helfen.</p>
+        <div class="stats">
+          <div class="s"><div class="n">🇮🇩</div><div class="t">Indonesien</div></div>
+          <div class="s"><div class="n">Bildung</div><div class="t">+ Versorgung</div></div>
+          <div class="s"><div class="n">ab 100&nbsp;€</div><div class="t">pro Monat</div></div>
         </div>
-      </article>
-      <article class="card reveal">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1571417800906-5a5058dbd45d?auto=format&fit=crop&w=800&q=70" alt="Hilfe für Waisen"></div>
-        <div class="bd">
-          <div class="amount">ab 100&nbsp;€</div>
-          <h3>🤲 Hilfe für Waisen</h3>
-          <p>Bildung, Versorgung und ein sicheres Umfeld für Waisenkinder — der Prophet ﷺ liebte es, Waisen zu helfen.</p>
-          <a class="btn btn-green" href="#spenden">Waisen helfen</a>
+        <a class="btn btn-green btn-sm" href="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget" target="_blank" rel="noopener">🤲 Patenschaft starten</a>
+      </div>
+    </div>
+
+    <!-- Spotlight 3: Nahrung & Nothilfe -->
+    <div class="spot reveal">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="txt">
+        <span class="pill">🍲 Nahrung &amp; Nothilfe</span>
+        <h3>Warme Mahlzeiten für bedürftige Familien</h3>
+        <p>Am Aschura-Tag bringen wir nahrhaftes Essen zu Familien, für die eine warme Mahlzeit keine Selbstverständlichkeit ist. Jede Verteilung wird mit Bild- und Videonachweis dokumentiert.</p>
+        <div class="stats">
+          <div class="s"><div class="n">ab 25&nbsp;€</div><div class="t">mehrere Familien</div></div>
+          <div class="s"><div class="n">📸</div><div class="t">Nachweis</div></div>
+          <div class="s"><div class="n">halal</div><div class="t">vor Ort</div></div>
         </div>
-      </article>
+        <a class="btn btn-green btn-sm" href="#spenden">🍲 Nahrung spenden</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDONESIA GALLERY -->
+<section class="sec tight">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="kicker">🇮🇩 Vor Ort in Indonesien</span>
+      <h2>Die Menschen, für die du spendest</h2>
+    </div>
+    <div class="gal reveal">
+      <img src="https://images.unsplash.com/photo-1589104760192-ccab0ce0d90f?auto=format&fit=crop&w=500&q=70" alt="Kinder in der Schule in Indonesien">
+      <img src="https://images.unsplash.com/photo-1633279309534-f761427548b6?auto=format&fit=crop&w=500&q=70" alt="Lächelndes Mädchen mit Hijab">
+      <img src="https://images.unsplash.com/photo-1681152299027-17efe7da7081?auto=format&fit=crop&w=500&q=70" alt="Junge Frau mit Hijab">
+      <img src="https://images.unsplash.com/photo-1630033622094-f5a0e9723bf1?auto=format&fit=crop&w=500&q=70" alt="Mutter mit Kindern in Indonesien">
     </div>
   </div>
 </section>
@@ -252,10 +367,29 @@ p{margin:0 0 1rem}
   <a class="btn btn-primary" href="#spenden">❤ Jetzt spenden</a>
 </section>
 
-<!-- DONATE -->
-<section class="sec" id="spenden">
+<!-- MORE PROJECT OPTIONS -->
+<section class="sec">
   <div class="wrap">
-    <div class="center narrow reveal">
+    <div class="shead center reveal">
+      <span class="kicker">Mehr Spendenmöglichkeiten</span>
+      <h2>Wähle dein Herzensprojekt</h2>
+      <p class="lead">Sechs Wege, an Aschura Gutes zu tun. Jede Option führt dich direkt zum sicheren Spendenformular.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&w=700&q=70" alt="Wasser"></div><div class="bd"><div class="amount">ab 50&nbsp;€</div><h3>💧 Sauberes Wasser</h3><p>Brunnen &amp; Wassersysteme für ganze Gemeinden.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1613447895817-e617a4093f50?auto=format&fit=crop&w=700&q=70" alt="Waisen"></div><div class="bd"><div class="amount">ab 100&nbsp;€</div><h3>🤲 Waisen-Patenschaft</h3><p>Bildung &amp; Versorgung für Waisen in Indonesien.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=700&q=70" alt="Nahrung"></div><div class="bd"><div class="amount">ab 25&nbsp;€</div><h3>🍲 Warme Mahlzeiten</h3><p>Nahrung für bedürftige Familien am Aschura-Tag.</p><a class="btn btn-outline btn-sm" href="../spenden.html" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1630033622094-f5a0e9723bf1?auto=format&fit=crop&w=700&q=70" alt="Hilfe zur Selbsthilfe"></div><div class="bd"><div class="amount">ab 500&nbsp;€</div><h3>🌱 Hilfe zur Selbsthilfe</h3><p>Werkzeuge &amp; Kapital für dauerhafte Unabhängigkeit.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1571417800906-5a5058dbd45d?auto=format&fit=crop&w=700&q=70" alt="Zakat"></div><div class="bd"><div class="amount">2,5 %</div><h3>🪙 Zakat al-Māl</h3><p>100 % an Berechtigte — auch an Aschura entrichtbar.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/zakat-ul-maal/tw69b1d51a7dcbb/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1633279309534-f761427548b6?auto=format&fit=crop&w=700&q=70" alt="Sadaqa"></div><div class="bd"><div class="amount">frei</div><h3>❤ Allgemeine Sadaqa</h3><p>Hilf dort, wo es am dringendsten gebraucht wird.</p><a class="btn btn-outline btn-sm" href="../spenden.html" target="_blank" rel="noopener">Spenden →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="sec cream2" id="spenden">
+  <div class="wrap">
+    <div class="shead center reveal">
       <span class="kicker">Jetzt spenden</span>
       <h2>Deine Sadaqa am Tag von Aschura</h2>
       <p class="lead">Sicher per SEPA-Lastschrift, PayPal oder Kreditkarte. Den Betrag und das Projekt wählst du selbst im Formular.</p>
@@ -266,7 +400,7 @@ p{margin:0 0 1rem}
         <p>100 % nachvollziehbar · gemeinnützig · Spendenquittung auf Anfrage</p>
       </div>
       <div class="amt-row">
-        <div class="amt">30 €</div><div class="amt">50 €</div><div class="amt">100 €</div><div class="amt">250 €</div>
+        <div class="amt">25 €</div><div class="amt">50 €</div><div class="amt">100 €</div><div class="amt">250 €</div><div class="amt">500 €</div>
       </div>
       <div class="tw-frame">
         <iframe id="tw" data-src="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" loading="lazy" title="Spendenformular"></iframe>
@@ -287,8 +421,29 @@ p{margin:0 0 1rem}
       <div class="t"><div class="ic">🕌</div><h4>Islamkonform</h4><p>Halal umgesetzt, mit Gelehrten abgestimmt.</p></div>
       <div class="t"><div class="ic">🌍</div><h4>Nachhaltig</h4><p>Strukturen, die auch morgen noch wirken.</p></div>
     </div>
-    <a class="btn btn-primary" href="#spenden" style="margin-top:32px">❤ Jetzt am Aschura-Tag spenden</a>
   </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="shead center reveal">
+      <span class="kicker">Häufige Fragen</span>
+      <h2>Gut zu wissen</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Ist meine Spende steuerlich absetzbar?</summary><div class="ans">Ja. Faircharity e.V. ist gemeinnützig. Eine Zuwendungsbestätigung (Spendenquittung) stellen wir dir auf Anfrage gerne aus.</div></details>
+      <details><summary>Wie wird meine Spende umgesetzt?</summary><div class="ans">Projekte werden vor Ort sorgfältig geplant, begleitet und mit Bild- und Videonachweis dokumentiert — damit du siehst, wo deine Hilfe ankommt.</div></details>
+      <details><summary>Was bedeutet die 100 % Zakat-Policy?</summary><div class="ans">Zakat und Zakat al-Fitr werden vollständig und ohne Abzüge an die berechtigten Empfänger (Asnāf) weitergegeben. Ein freiwilliger Zusatzbeitrag im Formular deckt die Umsetzung.</div></details>
+      <details><summary>Kann ich auch außerhalb von Aschura spenden?</summary><div class="ans">Selbstverständlich. Jede Sadaqa zählt — du kannst jederzeit über das Formular oder unsere <a href="../spenden.html" target="_blank" rel="noopener">Spendenseite</a> beitragen.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="band" style="padding:72px 22px">
+  <h2>Sei der Grund, warum jemand heute Hoffnung schöpft.</h2>
+  <a class="btn btn-primary" href="#spenden" style="margin-top:14px">❤ Jetzt am Aschura-Tag spenden</a>
 </section>
 
 <!-- FOOTER -->
@@ -303,7 +458,7 @@ p{margin:0 0 1rem}
       <a href="../impressum.html">Impressum</a>
       <a href="../datenschutz.html">Datenschutz</a>
     </div>
-    <p style="margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.55)">© 2026 Faircharity e.V.</p>
+    <p style="margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.55)">© 2026 Faircharity e.V. · Bilder: Unsplash</p>
   </div>
 </footer>
 
@@ -322,15 +477,14 @@ p{margin:0 0 1rem}
   }
   tick();setInterval(tick,1000);
 })();
-// Lazy-load donation iframe when it scrolls near view
+// Lazy-load donation iframe when near view
 (function(){
   var f=document.getElementById("tw");
   function load(){if(f&&f.dataset.src){f.src=f.dataset.src;delete f.dataset.src;}}
   if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){load();io.disconnect();}})},{rootMargin:"400px"});
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){load();io.disconnect();}})},{rootMargin:"500px"});
     io.observe(document.getElementById("spenden"));
   }else{load();}
-  // also load on first CTA click
   document.querySelectorAll('a[href="#spenden"]').forEach(function(a){a.addEventListener("click",load);});
 })();
 // reveal on scroll
