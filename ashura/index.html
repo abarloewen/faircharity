@@ -157,6 +157,15 @@ p{margin:0 0 1rem}
 .tw-frame{padding:14px 26px 26px}
 .tw-frame iframe{width:100%;min-height:760px;border:1px solid var(--line);border-radius:14px;background:#fff}
 .tw-alt{display:block;text-align:center;margin-top:12px;font-size:.92rem}
+.donate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:24px 26px 8px}
+.dopt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:2px solid var(--line);border-radius:16px;padding:18px;background:var(--cream);text-decoration:none;transition:.18s}
+.dopt:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
+.dopt .di{font-size:1.7rem;line-height:1}
+.dopt .dt{font-weight:800;color:var(--green-900)}
+.dopt .ds{font-size:.85rem;color:var(--green-700);font-weight:800}
+.dopt.featured{background:var(--green-800);border-color:var(--green-800)}
+.dopt.featured .dt,.dopt.featured .ds,.dopt.featured .di{color:#fff}
+.dnote{text-align:center;color:var(--muted);font-size:.9rem;padding:14px 26px 26px}
 
 /* trust strip */
 .tstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
@@ -190,6 +199,7 @@ p{margin:0 0 1rem}
 
 @media(max-width:860px){
   .tiers{grid-template-columns:1fr}
+  .donate-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .spot{grid-template-columns:1fr}
   .spot.rev .img{order:0}
@@ -327,7 +337,7 @@ p{margin:0 0 1rem}
 
     <!-- Spotlight 3: Nahrung & Nothilfe -->
     <div class="spot reveal">
-      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1698047181077-d77608c3f85b?auto=format&fit=crop&w=1000&q=70')"></div>
       <div class="txt">
         <span class="pill">🍲 Nahrung &amp; Nothilfe</span>
         <h3>Warme Mahlzeiten für bedürftige Familien</h3>
@@ -354,7 +364,7 @@ p{margin:0 0 1rem}
       <img src="https://images.unsplash.com/photo-1589104760192-ccab0ce0d90f?auto=format&fit=crop&w=500&q=70" alt="Kinder in der Schule in Indonesien">
       <img src="https://images.unsplash.com/photo-1633279309534-f761427548b6?auto=format&fit=crop&w=500&q=70" alt="Lächelndes Mädchen mit Hijab">
       <img src="https://images.unsplash.com/photo-1681152299027-17efe7da7081?auto=format&fit=crop&w=500&q=70" alt="Junge Frau mit Hijab">
-      <img src="https://images.unsplash.com/photo-1630033622094-f5a0e9723bf1?auto=format&fit=crop&w=500&q=70" alt="Mutter mit Kindern in Indonesien">
+      <img src="https://images.unsplash.com/photo-1622996061040-f2dba2aea76f?auto=format&fit=crop&w=500&q=70" alt="Mutter und Kind">
     </div>
   </div>
 </section>
@@ -378,8 +388,8 @@ p{margin:0 0 1rem}
     <div class="cards">
       <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&w=700&q=70" alt="Wasser"></div><div class="bd"><div class="amount">ab 50&nbsp;€</div><h3>💧 Sauberes Wasser</h3><p>Brunnen &amp; Wassersysteme für ganze Gemeinden.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
       <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1613447895817-e617a4093f50?auto=format&fit=crop&w=700&q=70" alt="Waisen"></div><div class="bd"><div class="amount">ab 100&nbsp;€</div><h3>🤲 Waisen-Patenschaft</h3><p>Bildung &amp; Versorgung für Waisen in Indonesien.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
-      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=700&q=70" alt="Nahrung"></div><div class="bd"><div class="amount">ab 25&nbsp;€</div><h3>🍲 Warme Mahlzeiten</h3><p>Nahrung für bedürftige Familien am Aschura-Tag.</p><a class="btn btn-outline btn-sm" href="../spenden.html" target="_blank" rel="noopener">Spenden →</a></div></article>
-      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1630033622094-f5a0e9723bf1?auto=format&fit=crop&w=700&q=70" alt="Hilfe zur Selbsthilfe"></div><div class="bd"><div class="amount">ab 500&nbsp;€</div><h3>🌱 Hilfe zur Selbsthilfe</h3><p>Werkzeuge &amp; Kapital für dauerhafte Unabhängigkeit.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1698047181077-d77608c3f85b?auto=format&fit=crop&w=700&q=70" alt="Nahrung"></div><div class="bd"><div class="amount">ab 25&nbsp;€</div><h3>🍲 Warme Mahlzeiten</h3><p>Nahrung für bedürftige Familien am Aschura-Tag.</p><a class="btn btn-outline btn-sm" href="../spenden.html" target="_blank" rel="noopener">Spenden →</a></div></article>
+      <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1604742520944-332677d8dda8?auto=format&fit=crop&w=700&q=70" alt="Muslimische Frau bei der Arbeit"></div><div class="bd"><div class="amount">ab 500&nbsp;€</div><h3>🌱 Hilfe zur Selbsthilfe</h3><p>Werkzeuge &amp; Kapital für dauerhafte Unabhängigkeit.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
       <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1571417800906-5a5058dbd45d?auto=format&fit=crop&w=700&q=70" alt="Zakat"></div><div class="bd"><div class="amount">2,5 %</div><h3>🪙 Zakat al-Māl</h3><p>100 % an Berechtigte — auch an Aschura entrichtbar.</p><a class="btn btn-outline btn-sm" href="https://spenden.twingle.de/faircharity-e-v/zakat-ul-maal/tw69b1d51a7dcbb/widget" target="_blank" rel="noopener">Spenden →</a></div></article>
       <article class="card reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1633279309534-f761427548b6?auto=format&fit=crop&w=700&q=70" alt="Sadaqa"></div><div class="bd"><div class="amount">frei</div><h3>❤ Allgemeine Sadaqa</h3><p>Hilf dort, wo es am dringendsten gebraucht wird.</p><a class="btn btn-outline btn-sm" href="../spenden.html" target="_blank" rel="noopener">Spenden →</a></div></article>
     </div>
@@ -396,16 +406,18 @@ p{margin:0 0 1rem}
     </div>
     <div class="donate-card reveal">
       <div class="hd">
-        <h3>🌙 Aschura-Spende</h3>
-        <p>100 % nachvollziehbar · gemeinnützig · Spendenquittung auf Anfrage</p>
+        <h3>🌙 Wähle dein Aschura-Projekt</h3>
+        <p>Ein Tippen genügt — du wirst sicher zum Spendenformular geleitet (SEPA · PayPal · Kreditkarte). Den Betrag wählst du selbst.</p>
       </div>
-      <div class="amt-row">
-        <div class="amt">25 €</div><div class="amt">50 €</div><div class="amt">100 €</div><div class="amt">250 €</div><div class="amt">500 €</div>
+      <div class="donate-grid">
+        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" target="_blank" rel="noopener"><span class="di">💧</span><span class="dt">Sauberes Wasser</span><span class="ds">ab 50 €</span></a>
+        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget" target="_blank" rel="noopener"><span class="di">🤲</span><span class="dt">Waisen-Patenschaft</span><span class="ds">ab 100 €</span></a>
+        <a class="dopt" href="../spenden.html" target="_blank" rel="noopener"><span class="di">🍲</span><span class="dt">Warme Mahlzeiten</span><span class="ds">ab 25 €</span></a>
+        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget" target="_blank" rel="noopener"><span class="di">🌱</span><span class="dt">Hilfe zur Selbsthilfe</span><span class="ds">ab 500 €</span></a>
+        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/zakat-ul-maal/tw69b1d51a7dcbb/widget" target="_blank" rel="noopener"><span class="di">🪙</span><span class="dt">Zakat al-Māl</span><span class="ds">2,5 %</span></a>
+        <a class="dopt featured" href="../spenden.html" target="_blank" rel="noopener"><span class="di">❤</span><span class="dt">Allgemeine Sadaqa</span><span class="ds">frei wählbar</span></a>
       </div>
-      <div class="tw-frame">
-        <iframe id="tw" data-src="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" loading="lazy" title="Spendenformular"></iframe>
-        <a class="tw-alt" href="../spenden.html" target="_blank" rel="noopener">Lieber ein anderes Projekt wählen? → Alle Spendenoptionen</a>
-      </div>
+      <div class="dnote">🔒 100 % nachvollziehbar · gemeinnützig · Spendenquittung auf Anfrage</div>
     </div>
   </div>
 </section>
@@ -476,16 +488,6 @@ p{margin:0 0 1rem}
     d.textContent=dd;h.textContent=("0"+hh).slice(-2);m.textContent=("0"+mm).slice(-2);s.textContent=("0"+ss).slice(-2);
   }
   tick();setInterval(tick,1000);
-})();
-// Lazy-load donation iframe when near view
-(function(){
-  var f=document.getElementById("tw");
-  function load(){if(f&&f.dataset.src){f.src=f.dataset.src;delete f.dataset.src;}}
-  if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){load();io.disconnect();}})},{rootMargin:"500px"});
-    io.observe(document.getElementById("spenden"));
-  }else{load();}
-  document.querySelectorAll('a[href="#spenden"]').forEach(function(a){a.addEventListener("click",load);});
 })();
 // reveal on scroll
 (function(){
