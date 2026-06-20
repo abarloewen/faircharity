@@ -62,6 +62,7 @@
     "🧮 Calculate Fidya / Kaffara": { tr: "🧮 Fidye / Keffaret hesapla", ar: "🧮 احسب الفدية / الكفّارة", ms: "🧮 Kira Fidyah / Kaffarah" },
     // ----- home page -----
     "Help with system · responsibility · impact": { tr: "Sistemli · sorumlu · etkili yardım", ar: "مساعدة بنظام · مسؤولية · أثر", ms: "Bantuan bersistem · bertanggungjawab · berkesan" },
+    "We are changing <span class='accent'>how help works.</span>": { tr: "Yardımın işleyişini <span class='accent'>değiştiriyoruz.</span>", ar: "<span class='accent'>نُغيّر</span> طريقة عمل المساعدة.", ms: "Kami mengubah <span class='accent'>cara bantuan berfungsi.</span>" },
     "The humanitarian sector needs reform": { tr: "İnsani yardım sektörü reforma muhtaç", ar: "القطاع الإنساني بحاجة إلى إصلاح", ms: "Sektor kemanusiaan memerlukan reformasi" },
     "We help so that people become stronger and independent.": { tr: "İnsanlar daha güçlü ve bağımsız olsun diye yardım ediyoruz.", ar: "نساعد ليصبح الناس أقوى وأكثر استقلالًا.", ms: "Kami membantu supaya manusia menjadi lebih kuat dan berdikari." },
     "❤ Donate now": { tr: "❤ Şimdi bağış yap", ar: "❤ تبرّع الآن", ms: "❤ Derma sekarang" },
