@@ -163,6 +163,7 @@ section{position:relative}
 
 /* page hero (smaller, for subpages) */
 .page-hero{padding:66px 0 70px}
+.page-hero.hero-img{background-size:cover;background-position:center;background-repeat:no-repeat}
 .page-hero .eyebrow{margin-bottom:16px}
 .page-hero h1{color:#fff}
 .page-hero p{color:rgba(255,255,255,.85);max-width:62ch;font-size:1.08rem}
