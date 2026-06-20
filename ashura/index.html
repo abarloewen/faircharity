@@ -157,15 +157,19 @@ p{margin:0 0 1rem}
 .tw-frame{padding:14px 26px 26px}
 .tw-frame iframe{width:100%;min-height:760px;border:1px solid var(--line);border-radius:14px;background:#fff}
 .tw-alt{display:block;text-align:center;margin-top:12px;font-size:.92rem}
-.donate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:24px 26px 8px}
-.dopt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:2px solid var(--line);border-radius:16px;padding:18px;background:var(--cream);text-decoration:none;transition:.18s}
+.donate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:24px 26px 6px}
+.dopt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:2px solid var(--line);border-radius:16px;padding:16px;background:var(--cream);text-decoration:none;transition:.18s;cursor:pointer;font:inherit;color:inherit;text-align:left;width:100%}
 .dopt:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
-.dopt .di{font-size:1.7rem;line-height:1}
+.dopt.active{border-color:var(--gold);background:#fff;box-shadow:var(--shadow);transform:none}
+.dopt.active::after{content:"● ausgewählt";font-size:.7rem;font-weight:800;color:var(--gold)}
+.dopt .di{font-size:1.6rem;line-height:1}
 .dopt .dt{font-weight:800;color:var(--green-900)}
 .dopt .ds{font-size:.85rem;color:var(--green-700);font-weight:800}
-.dopt.featured{background:var(--green-800);border-color:var(--green-800)}
-.dopt.featured .dt,.dopt.featured .ds,.dopt.featured .di{color:#fff}
+.tw-host{padding:8px 26px 6px}
+.tw-host iframe{width:100%;height:900px;border:1px solid var(--line);border-radius:14px;background:#fff;display:block}
+.tw-empty{border:1px dashed var(--green-600);border-radius:14px;padding:40px 20px;text-align:center;color:var(--ink-soft);background:var(--cream);font-weight:600}
 .dnote{text-align:center;color:var(--muted);font-size:.9rem;padding:14px 26px 26px}
+@media(max-width:860px){.tw-host iframe{height:1180px}}
 
 /* trust strip */
 .tstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
@@ -407,17 +411,21 @@ p{margin:0 0 1rem}
     <div class="donate-card reveal">
       <div class="hd">
         <h3>🌙 Wähle dein Aschura-Projekt</h3>
-        <p>Ein Tippen genügt — du wirst sicher zum Spendenformular geleitet (SEPA · PayPal · Kreditkarte). Den Betrag wählst du selbst.</p>
+        <p>Tippe ein Projekt an — das sichere Spendenformular öffnet direkt hier (SEPA · PayPal · Kreditkarte). Den Betrag wählst du selbst.</p>
       </div>
-      <div class="donate-grid">
-        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget" target="_blank" rel="noopener"><span class="di">💧</span><span class="dt">Sauberes Wasser</span><span class="ds">ab 50 €</span></a>
-        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget" target="_blank" rel="noopener"><span class="di">🤲</span><span class="dt">Waisen-Patenschaft</span><span class="ds">ab 100 €</span></a>
-        <a class="dopt" href="../spenden.html" target="_blank" rel="noopener"><span class="di">🍲</span><span class="dt">Warme Mahlzeiten</span><span class="ds">ab 25 €</span></a>
-        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget" target="_blank" rel="noopener"><span class="di">🌱</span><span class="dt">Hilfe zur Selbsthilfe</span><span class="ds">ab 500 €</span></a>
-        <a class="dopt" href="https://spenden.twingle.de/faircharity-e-v/zakat-ul-maal/tw69b1d51a7dcbb/widget" target="_blank" rel="noopener"><span class="di">🪙</span><span class="dt">Zakat al-Māl</span><span class="ds">2,5 %</span></a>
-        <a class="dopt featured" href="../spenden.html" target="_blank" rel="noopener"><span class="di">❤</span><span class="dt">Allgemeine Sadaqa</span><span class="ds">frei wählbar</span></a>
+      <div class="donate-grid" id="tw-tabs">
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/wassertower-fuer-ganze-gemeinden/tw699dcb54b8ea1/widget"><span class="di">💧</span><span class="dt">Sauberes Wasser</span><span class="ds">ab 50 €</span></button>
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/patenschaften/tw69afbb7e27715/widget"><span class="di">🤲</span><span class="dt">Waisen-Patenschaft</span><span class="ds">ab 100 €</span></button>
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/hilfe-zur-selbsthilfe-empowerment/tw69b14626aa520/widget"><span class="di">🌱</span><span class="dt">Hilfe zur Selbsthilfe</span><span class="ds">ab 500 €</span></button>
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/zakat-ul-maal/tw69b1d51a7dcbb/widget"><span class="di">🪙</span><span class="dt">Zakat al-Māl</span><span class="ds">2,5 %</span></button>
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/zakat-ul-fitr-26/tw699f696f71e32/widget"><span class="di">🌙</span><span class="dt">Zakat al-Fitr</span><span class="ds">je Person</span></button>
+        <button class="dopt" type="button" data-tw="https://spenden.twingle.de/faircharity-e-v/eid-ul-fitr-26/tw69ba054494997/widget"><span class="di">💝</span><span class="dt">Eid-Geschenk</span><span class="ds">für Waisen</span></button>
       </div>
-      <div class="dnote">🔒 100 % nachvollziehbar · gemeinnützig · Spendenquittung auf Anfrage</div>
+      <div class="tw-host" id="tw-host">
+        <div class="tw-empty" id="tw-empty">👆 Wähle oben ein Projekt — das Spendenformular erscheint direkt hier.</div>
+        <iframe id="tw" title="Spendenformular" style="display:none" loading="lazy"></iframe>
+      </div>
+      <div class="dnote">🔒 100 % nachvollziehbar · gemeinnützig · Spendenquittung auf Anfrage · <a href="../spenden.html" target="_blank" rel="noopener">alle Projekte ansehen</a></div>
     </div>
   </div>
 </section>
@@ -488,6 +496,41 @@ p{margin:0 0 1rem}
     d.textContent=dd;h.textContent=("0"+hh).slice(-2);m.textContent=("0"+mm).slice(-2);s.textContent=("0"+ss).slice(-2);
   }
   tick();setInterval(tick,1000);
+})();
+// Inline donation widget: load selected project's Twingle form on the same page
+(function(){
+  var tabs=document.getElementById("tw-tabs"),host=document.getElementById("tw-host"),
+      frame=document.getElementById("tw"),empty=document.getElementById("tw-empty");
+  if(!tabs||!frame) return;
+  var loaded=false;
+  function select(url,btn){
+    if(url && frame.getAttribute("src")!==url){frame.setAttribute("src",url);}
+    if(empty) empty.style.display="none";
+    frame.style.display="block";
+    Array.prototype.forEach.call(tabs.querySelectorAll(".dopt"),function(b){b.classList.remove("active");});
+    if(btn) btn.classList.add("active");
+    loaded=true;
+  }
+  tabs.addEventListener("click",function(e){
+    var b=e.target.closest(".dopt"); if(!b) return;
+    select(b.getAttribute("data-tw"),b);
+    setTimeout(function(){host.scrollIntoView({behavior:"smooth",block:"nearest"});},60);
+  });
+  // auto-load first project when the donate section comes into view
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){
+      if(x.isIntersecting && !loaded){var first=tabs.querySelector(".dopt");select(first.getAttribute("data-tw"),first);io.disconnect();}
+    });},{rootMargin:"300px"});
+    io.observe(document.getElementById("spenden"));
+  }
+  // best-effort auto-resize from the Twingle iframe (avoids inner scrollbars on mobile)
+  window.addEventListener("message",function(e){
+    if(typeof e.origin!=="string"||e.origin.indexOf("twingle")<0) return;
+    var h=0,d=e.data;
+    if(d&&typeof d==="object"){h=d.height||d.frameHeight||d.iframeHeight||0;}
+    else if(typeof d==="string"&&/height/i.test(d)){var m=d.match(/(\d{3,5})/);if(m)h=parseInt(m[1],10);}
+    if(h>300&&h<7000){frame.style.height=h+"px";}
+  });
 })();
 // reveal on scroll
 (function(){
